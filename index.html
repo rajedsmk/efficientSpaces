@@ -150,13 +150,46 @@
 
   <section class="section" id="contact">
     <h2>Enquiry & Contact</h2>
-    <form action="https://discord.com/api/webhooks/1442783199653662723/TzwezTLDKuQ3Sxa-NxCaD2dRq64G7K3JxdwJOF8AKRHynHoIWUxhWsB3JzlAykBt3p4O" method="POST">
-      <input type="text" name="username" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+    <form id="contactForm">
+  <input type="text" id="username" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
+  <button type="submit">Send Message</button>
+</form>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("message").value;
+
+    // your webhook URL
+    const webhookURL = "https://discord.com/api/webhooks/1442783199653662723/TzwezTLDKuQ3Sxa-NxCaD2dRq64G7K3JxdwJOF8AKRHynHoIWUxhWsB3JzlAykBt3p4O";
+
+    const payload = {
+      content: `📩 **New Enquiry Received**\n\n**Name:** ${username}\n**Email:** ${email}\n**Message:**\n${msg}`
+    };
+
+    fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    }).then(res => {
+      if (res.ok) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      } else {
+        alert("Error sending message.");
+      }
+    });
+  });
+</script>
+
   </section>
 
   <footer>
