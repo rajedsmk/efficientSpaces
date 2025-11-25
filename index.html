@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efficient Think Spaces — Online Study Library</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: auto;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 12px 20px;
+      background: #4a6cf7;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3d59d6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Efficient Think Spaces</h1>
+    <p>The ultimate online study library with accountability mentors, peer groups, and video-on study sessions designed for those working or studying from home.</p>
+  </header>
+
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28" alt="Focused Study">
+        <h3>Stay Motivated</h3>
+        <p>Studying or working from home can be isolating and demotivating. Our group video sessions recreate the \"library feel\" with supportive peers.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" alt="Mentorship">
+        <h3>Dedicated Accountability Mentor</h3>
+        <p>Each session begins with a 5-minute ritual guided by your mentor—someone who has completed higher education and truly understands the struggle.</p>
+      </div>
+
+      
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Community">
+        <h3>Community of Consistent Learners</h3>
+        <p>Join a regular group of motivated individuals who show up every day—your virtual group of study partners.</p>
+      </div>
+	  
+	  <div class="card">
+        <img src="https://images.unsplash.com/photo-1579203650228-40e854955b9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxhbGx8fGRhdGF8ZW58MHx8fHw&ixlib=rb-4.0.3&q=80&w=1080" alt="" >
+        <h3>Data Privacy</h3>
+        <p>You can choose to stay anonymous as you regularly do. No data storage on our part.</p>
+      </div>
+	  
+	  <div class="card">
+    <img src="http://googleusercontent.com/image_collection/image_retrieval/7184165934632924018_0" alt="">
+    
+    <h3>Women Mentor for Girls</h3>
+    <p>Female students can opt for a dedicated women mentor for comfort, safety, and better connection.</p>
+</div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Enquiry & Contact</h2>
+    <form action="https://discord.com/api/webhooks/YOUR_WEBHOOK_URL" method="POST">
+      <input type="text" name="username" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Efficient Think Spaces — All Rights Reserved</p>
+  </footer>
+</body>
+</html>
